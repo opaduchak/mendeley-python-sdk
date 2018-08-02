@@ -65,7 +65,7 @@ class MendeleySession(OAuth2Session):
         self.trash = Trash(self, None)
 
     def folder_documents(self, folder_id):
-	return FolderDocuments(self, folder_id)
+        return FolderDocuments(self, folder_id)
 
     def group_members(self, group_id):
         return GroupMembers(self, group_id)
