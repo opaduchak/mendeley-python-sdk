@@ -16,7 +16,7 @@ class DummyStateGenerator(object):
 
 def load_config_from_file(filename):
     with open(filename) as f:
-        return yaml.load(f)
+        return yaml.safe_load(f)
 
 
 def load_config():

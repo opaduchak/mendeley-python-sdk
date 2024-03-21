@@ -1,6 +1,6 @@
 import platform
 
-from future.moves.urllib.parse import urljoin
+from urllib.parse import urljoin
 from requests_oauthlib import OAuth2Session
 
 from mendeley.exception import MendeleyApiException
