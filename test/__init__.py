@@ -17,14 +17,14 @@ class DummyStateGenerator(object):
 
 def load_config_from_file(filename):
     with open(filename) as f:
-        config = yaml.load(f)
-        
+        config = yaml.safe_load(f)
+
         if 'MENDELEY_CLIENT_ID' in os.environ:
             config['clientId'] = os.environ.get('MENDELEY_CLIENT_ID')
-        
+
         if 'MENDELEY_CLIENT_SECRET' in os.environ:
             config['clientSecret'] = os.environ.get('MENDELEY_CLIENT_SECRET')
-        
+
         if 'MENDELEY_ACCESS_TOKEN' in os.environ:
             config['accessToken'] = os.environ.get('MENDELEY_ACCESS_TOKEN')
 
